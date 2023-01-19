@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <script src="https://kit.fontawesome.com/f8e3a37758.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/f8e3a37758.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/index.js" type="module" defer></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Lista De Tarefas</h1>
+    </header>
+
+    <section class="container">
+      <section class="addTask">
+        <form>
+          <label>Adicione uma nova tarefa:</label>
+          <input name="content" type="text" placeholder="O que você vai fazer ?" autofocus autocomplete="off" maxlength="45ch">
+          <button type="submit">
+            <i class="fa-regular fa-plus"></i>
+          </button>
+          <div class="messages">
+            <span id="addCount" class="invisible">0/45</span>
+            <span id="addMessage" class="invisible">Campo vazio</span>
+          </div>
+        </form>
+      </section>
+      <section class="editTask hidden">
+        <form>
+          <label>Edite a tarefa:</label>
+          <input id="content" type="text" autofocus autocomplete="off" maxlength="45ch">
+          <button type="submit">
+            <i class="fa-solid fa-check-double"></i>
+          </button>
+          <button id="cancel">
+            Cancelar
+          </button>
+          <div class="messages">
+            <span id="editCount" class="invisible">0/45</span>
+            <span id="editMessage" class="invisible">Campo vazio</span>
+          </div>
+        </form>
+      </section>
+      <hr>
+      <section class="toolbar">
+        <div class="search">
+          <form class="search">
+            <label for="pesquisar">Pesquisar:</label>
+            <input type="text" placeholder="Busque uma tarefa...">
+            <button data="erase">
+              <i class="fa-solid fa-delete-left"></i>
+            </button>
+          </form>
+        </div>
+
+        <div class="filter">
+          <label for="filtrar">Filtrar:</label>
+          <select name="filter" id="filter">
+            <option value="all">Todos</option>
+            <option value="done">Feitos</option>
+            <option value="todo">A Fazer</option>
+          </select>
+        </div>
+      </section>
+      <ul class="tasks">
+
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>
